@@ -1,30 +1,75 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<template class="bg-dark">
+  <!-- Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+
+  <Header />
+  <router-view />
 </template>
 
+<script>
+import Header from "./components/Header.vue";
+
+export default {
+  name: "App",
+  components: {
+    Header,
+  },
+};
+</script>
+
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import'~bootstrap/dist/css/bootstrap.css';
+
+h1 {
+  padding: 5vw;
+  color: aliceblue;
 }
 
-nav {
-  padding: 30px;
+h3,
+h4,
+h5,
+h6 {
+  color: #2B9C96;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+body {
+  overflow: hidden;
+  font-family: "Prompt", sans-serif;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.spacer {
+  aspect-ratio: 900/560;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.spacer2 {
+  aspect-ratio: 900/500;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home {
+  background-image: url("./assets/stacked-waves-haikei.svg");
+}
+
+.about {
+  background-image: url("./assets/layered-waves-haikei.svg");
+}
+
+.experience {
+  background-image: url("./assets/layered-steps-haikei.svg");
+}
+
+.skills {
+  background-image: url("./assets/blob-scene-haikei.svg");
 }
 </style>
